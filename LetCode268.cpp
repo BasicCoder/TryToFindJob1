@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        int size = nums.size();
+		int sum = 0;
+        sum = size * (size + 1) / 2;
+        for(int i = 0; i < size; ++i){
+            sum -=nums[i];
+        }
+        return sum;
+    }
+};
+
+int main(){
+
+}
